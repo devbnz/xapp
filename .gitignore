@@ -1,6 +1,0 @@
-config.php
-vendor
-composer.lock
-composer.phar
-.vagrant
-.provisioned
