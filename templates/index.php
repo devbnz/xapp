@@ -48,7 +48,8 @@
       <!--
       <p>Your consumer key is <mark><?= $consumerKey ?></mark> (edit <code>config.php</code> to change)</p>
       -->
-      <p>This application is part of the <b>platform</b> project.</p>
+      <p>This application is part of the <b>platform</b> project by Erik Woitschig.<br/>
+      http://bnz-power.com</p>
 
       <? if ($isLoggedIn) { ?>
         <a href="logout" class="btn btn-danger">Logout</a>
