@@ -33,7 +33,7 @@ $app->get('/', function () use ($hybridauth, $config, $app) {
     $photoURL    = 'https://www.xing.com/img/n/nobody_m.140x185.jpg';
   }
 
-  $app->render('index.php', array(
+  $app->render('index-mat.php', array(
     "displayName" => $displayName,
     "photoURL"    => $photoURL,
     "isLoggedIn"  => $hybridauth->isConnectedWith('XING'),
@@ -62,7 +62,7 @@ $app->get('/contacts', function () use ($hybridauth, $config, $app) {
   }
 
   /*
-  $app->render('index.php', array(
+  $app->render('index-mat.php', array(
     "displayName" => $displayName,
     "photoURL"    => $photoURL,
     "isLoggedIn"  => $hybridauth->isConnectedWith('XING'),
@@ -92,7 +92,7 @@ $app->get('/find/appmedia', function () use ($hybridauth, $config, $app) {
   }
 
   /*
-  $app->render('index.php', array(
+  $app->render('index-mat.php', array(
     "displayName" => $displayName,
     "photoURL"    => $photoURL,
     "isLoggedIn"  => $hybridauth->isConnectedWith('XING'),
@@ -122,7 +122,7 @@ $app->get('/search/:keyword', function ($keyword) use ($hybridauth, $config, $ap
   }
 
   /*
-  $app->render('index.php', array(
+  $app->render('index-mat.php', array(
   "displayName" => $displayName,
   "photoURL"    => $photoURL,
   "isLoggedIn"  => $hybridauth->isConnectedWith('XING'),
@@ -145,7 +145,7 @@ $app->get('/search/user/:userid', function ($userid) use ($hybridauth, $config, 
     */
     //$results    = $xing->searchUsersByKeyword($keyword);
 
-    $results    = $xing->getUserProfileById($userid);    
+    $results    = $xing->getUserProfileById($userid);
     $results = json_encode($results);
     echo $results;
   } else {
@@ -154,7 +154,7 @@ $app->get('/search/user/:userid', function ($userid) use ($hybridauth, $config, 
   }
 
   /*
-  $app->render('index.php', array(
+  $app->render('index-mat.php', array(
   "displayName" => $displayName,
   "photoURL"    => $photoURL,
   "isLoggedIn"  => $hybridauth->isConnectedWith('XING'),

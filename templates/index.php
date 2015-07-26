@@ -2,11 +2,13 @@
 <html>
 
   <head>
+
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XAPP for Fonpit AG</title>
+    <title>XAPP - Xing Client by Sourcloud</title>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
     <script>
 
 
@@ -41,10 +43,12 @@
   </head>
 
   <body>
+
     <div class="container">
       <div class="starter-template">
       <h1>Hello <?= $displayName ?></h1>
       <img src="<?= $photoURL ?>" class="img-rounded">
+
       <!--
       <p>Your consumer key is <mark><?= $consumerKey ?></mark> (edit <code>config.php</code> to change)</p>
       -->
@@ -61,6 +65,7 @@
     <div id="results"></div>
       </div>
     </div>
+
   </body>
 
 </html>
