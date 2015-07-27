@@ -25,50 +25,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/material.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-    </style>
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script>
+    <script src="assets/js/xapp.js"></script>
 
-
-    $(function() {
-      $( "#contacts" ).click(function() {
-        //alert( "Handler for .click() called." );
-        getContacts();
-      });
-    });
-
-
-
-    function getContacts(){
-
-      $("#results").empty();
-      $.getJSON( "contacts", function( data ) {
-        var items = [];
-        $.each( data, function( key, val ) {
-          items.push( "<li><img src='" +val.photoURL +"' />" + val.displayName + " | " + val.profileURL + " | "+ val.email + "</li>" );
-          console.log(val);
-        });
-
-        $( "<ul/>", {
-          "class": "my-new-list",
-          html: items.join( "" )
-        }).appendTo( "#results" );
-
-      });
-
-    }
-    </script>
   </head>
 
   <body>
@@ -92,7 +53,7 @@
             <? if ($isLoggedIn) { ?>
               <a href="logout"><button class="mdl-button mdl-js-button mdl-button--raised">LOGOUT</button></a>
               <a id="contacts"><button id="contacts" class="mdl-button mdl-js-button mdl-button--raised">Contacts</button></a>
-              <button class="mdl-button mdl-js-button mdl-button--raised">Search</button>
+              <a id="search"><button class="mdl-button mdl-js-button mdl-button--raised">Search</button></a>
             <? } else { ?>
               <a href="login"><button class="mdl-button mdl-js-button mdl-button--raised">LOGIN via XING</button></a>
             <? } ?>
@@ -102,22 +63,28 @@
           <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
             <div class="mdl-card__title mdl-color-text--grey-50">
               <div id="results">
-              <h3 class="quote">Many people go differnt ways to see the same thing.</a></h3>
+              <h3 class="quote">Many people go different ways to see the same thing.</a></h3>
               </div>
             </div>
           </div>
 
           <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
               <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
+                <a href="https://twitter.com/devbnz" target="_blank">
                 <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
                   <span class="visuallyhidden">Twitter</span>
                 </button>
+                </a>
+                <a href="https://facebook.com/bnz4u" target="_blank">
                 <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
                   <span class="visuallyhidden">Facebook</span>
                 </button>
+              </a>
+                <a href="https://www.google.com/+ErikWoitschig" target="_blank">
                 <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
                   <span class="visuallyhidden">Google Plus</span>
                 </button>
+              </a>
               </div>
           </div>
 

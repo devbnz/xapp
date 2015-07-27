@@ -137,10 +137,9 @@ body .demo-blog {
   border-top-right-radius: 2px;
 }
 .demo-blog .something-else .mdl-card__media img {
-  /*
-  width: 64px;
-  height: 64px;
-  */
+
+  width: 140px;
+  height: 180px;
   margin-bottom: 10px;
 }
 .demo-blog .something-else .mdl-card__supporting-text {
@@ -373,3 +372,8 @@ body .demo-blog {
 .mdl-data-table td {
   color: #999999;
 }
+
+.mdl-textfield__input
+{color: #fff;}
+.mdl-textfield__label
+{color: #fff;}
