@@ -366,3 +366,10 @@ body .demo-blog {
   background-color: white;
   box-sizing: border-box;
 }
+
+.mdl-data-table{
+  color: #999999;
+}
+.mdl-data-table td {
+  color: #999999;
+}
