@@ -1,10 +1,11 @@
 var searchTable =
-'<table id="contacts" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp"> \
+'<br><br> \
+<table id="contacts" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp"> \
 <thead> \
 <tr> \
-<th class="mdl-data-table__cell--non-numeric">Image</th> \
-<th>Display Name</th> \
-<th>Email</th> \
+<th class="mdl-data-table__cell--non-numeric">XING-Profile-IDs</th> \
+<th> Firstname </th> \
+<th> Lastname </th> \
 </tr> \
 </thead> \
 <tbody> \
@@ -56,15 +57,13 @@ function displaySearch(){
 
 function executeSearch(keyword){
   $.getJSON( "search/" + keyword, function( data ) {
-    $('.searchResults').append(searchTable);
+    $('.searchResults').empty().append(searchTable);
     console.log(data);
     var items = '';
-    console.log(data.users.total);
-    $.each( data.users, function( key, val ) {
-      console.log(key, val);
-      items += "<tr><td><img src='" +val.photoURL +"' /></td><td>" + val.id + "</td><td>" + val.id + " | "+ val.email + "</td></tr>";
+    $("#searchFab").append(data.users.total);
+    $.each( data.users.items, function(key,val) {
+    items += "<tr><td>" + val.user.id + "</td><td>" + val.user.first_name + "</td><td>" + val.user.last_name + "</td></tr>";
     });
-    console.log(items);
     $('#contacts > tbody:last-child').append(items);
   });
 }

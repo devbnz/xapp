@@ -473,7 +473,7 @@ class Hybrid_Providers_XING extends Hybrid_Provider_Model_OAuth1 {
 
     function searchUsersByKeyword($keyword) {
       try {
-        $oResponse = $this->api->get('users/find?keywords='.$keyword);
+        $oResponse = $this->api->get('users/find?keywords='.$keyword.'&limit=100&user_fields=id,first_name,last_name');
         //  $oTotal    = $oResponse->contacts->users;
         //  $iTotal    = $oResponse->contacts->total;
 
