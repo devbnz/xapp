@@ -3,9 +3,11 @@ var searchTable =
 <table id="contacts" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp"> \
 <thead> \
 <tr> \
-<th class="mdl-data-table__cell--non-numeric">XING-Profile-IDs</th> \
-<th> Firstname </th> \
+<!-- <th class="mdl-data-table__cell--non-numeric">XING-Profile-IDs</th> --> \
+<th class="mdl-data-table__cell--non-numeric"> Firstname </th> \
 <th> Lastname </th> \
+<th> Company </th> \
+<th> Position </th> \
 </tr> \
 </thead> \
 <tbody> \
@@ -62,7 +64,7 @@ function executeSearch(keyword){
     var items = '';
     $("#searchFab").append(data.users.total);
     $.each( data.users.items, function(key,val) {
-    items += "<tr><td>" + val.user.id + "</td><td>" + val.user.first_name + "</td><td>" + val.user.last_name + "</td></tr>";
+    items += "<tr><!--<td>" + val.user.id + "</td>--><td>" + val.user.first_name + "</td><td>" + val.user.last_name + "</td><td>" + val.user.professional_experience.primary_company.name + "</td><<td>" + val.user.professional_experience.primary_company.title + "</td><</tr>";
     });
     $('#contacts > tbody:last-child').append(items);
   });

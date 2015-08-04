@@ -68,6 +68,23 @@
             </div>
           </div>
 
+          <div class="demo-grid-ruler mdl-grid">
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+            <div class="mdl-cell mdl-cell--1-col">1</div>
+          </div>
+
+
+
           <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
               <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
                 <a href="https://twitter.com/devbnz" target="_blank">
