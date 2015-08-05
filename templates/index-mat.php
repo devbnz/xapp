@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="Xapp">
   <head>
     <title>XAPP - Xing Client by Sourcloud</title>
     <meta charset="utf-8">
@@ -28,8 +28,15 @@
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-messages.min.js"></script>
+    <script src="assets/js/xapp-ctrl.js"></script>
+    <script src="assets/js/xapp-app.js"></script>
     <script src="assets/js/xapp.js"></script>
-
+    <script src="assets/js/ga.js"></script>
   </head>
 
   <body>
@@ -68,23 +75,6 @@
             </div>
           </div>
 
-          <div class="demo-grid-ruler mdl-grid">
-            <div class="mdl-cell mdl-cell--1-col">1</div>
-            <div class="mdl-cell mdl-cell--1-col">1</div>
-            <div class="mdl-cell mdl-cell--1-col">1</div>
-            <div class="mdl-cell mdl-cell--1-col">1</div>
-            <div class="mdl-cell mdl-cell--1-col">1</div>
-            <div class="mdl-cell mdl-cell--1-col">1</div>
-            <div class="mdl-cell mdl-cell--1-col">1</div>
-            <div class="mdl-cell mdl-cell--1-col">1</div>
-            <div class="mdl-cell mdl-cell--1-col">1</div>
-            <div class="mdl-cell mdl-cell--1-col">1</div>
-            <div class="mdl-cell mdl-cell--1-col">1</div>
-            <div class="mdl-cell mdl-cell--1-col">1</div>
-          </div>
-
-
-
           <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
               <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
                 <a href="https://twitter.com/devbnz" target="_blank">
@@ -110,12 +100,6 @@
       </main>
       <div class="mdl-layout__obfuscator"></div>
     </div>
-    <!--
-    <script src="../../material.min.js"></script>
--->
-      <!--
-      <p>Your consumer key is <mark><?= $consumerKey ?></mark> (edit <code>config.php</code> to change)</p>
-      -->
     </div>
 
   </body>
