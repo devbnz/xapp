@@ -60,8 +60,8 @@
       ]);
 
 
-      xappControllers.controller('SearchCtrl', ['$scope', '$routeParams', '$location',
-      function($scope, $routeParams, $location) {
+      xappControllers.controller('SearchCtrl', ['$scope', '$routeParams', '$location', '$http',
+      function($scope, $routeParams, $location, $http) {
 
         $scope.test = function() {
 
