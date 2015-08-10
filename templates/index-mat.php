@@ -67,12 +67,7 @@
           </div>
           </div>
 
-          <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__title mdl-color-text--grey-50">
-              <div id="results">
-              <h3 class="quote">Many people go different ways to see the same thing.</a></h3>
-              </div>
-            </div>
+          <div class="mdl-card amazing mdl-cell mdl-cell--12-col" ng-view>
           </div>
 
           <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
