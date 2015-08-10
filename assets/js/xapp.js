@@ -31,7 +31,7 @@ $(function() {
 function getContacts(){
 
     $("#results").empty().load("views/contacts.html", function () {
-      console.log("table added");
+  //    console.log("table added");
       $.getJSON( "contacts", function( data ) {
         console.log(data);
         var items = '';

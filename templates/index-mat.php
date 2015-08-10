@@ -59,8 +59,8 @@
               <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
             <? if ($isLoggedIn) { ?>
               <a href="logout"><button class="mdl-button mdl-js-button mdl-button--raised">LOGOUT</button></a>
-              <a id="contacts"><button id="contacts" class="mdl-button mdl-js-button mdl-button--raised">Contacts</button></a>
-              <a id="search"><button class="mdl-button mdl-js-button mdl-button--raised">Search</button></a>
+              <a ng-href="#/contacts"><button id="contacts" class="mdl-button mdl-js-button mdl-button--raised">Contacts</button></a>
+              <a ng-href="#/search"><button class="mdl-button mdl-js-button mdl-button--raised">Search</button></a>
             <? } else { ?>
               <a href="login"><button class="mdl-button mdl-js-button mdl-button--raised">LOGIN via XING</button></a>
             <? } ?>
