@@ -1,5 +1,12 @@
 Keyword search:<br/>
 <!-- Simple Textfield -->
+
+<form name="myForm" ng-submit="test()">
+  User name: <input type="text" name="userName" ng-model="user.name" required>
+  <span class="error" ng-show="myForm.userName.$error.required">
+    Required!</span> <input class="btn btn-default" type="submit" value="Submit">
+  </form>
+<br/><br/>
 <form>
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
     <input class="mdl-textfield__input" type="text" id="keywords" />

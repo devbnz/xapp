@@ -1,33 +1,4 @@
-var searchTable =
-'<br><br> \
-<table id="contacts" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp"> \
-<thead> \
-<tr> \
-<!-- <th class="mdl-data-table__cell--non-numeric">XING-Profile-IDs</th> --> \
-<th class="mdl-data-table__cell--non-numeric"> Firstname </th> \
-<th> Lastname </th> \
-<th> Company </th> \
-<th> Position </th> \
-</tr> \
-</thead> \
-<tbody> \
-</tbody> \
-</table>';
-
-
-$(function() {
-    $( "#contacts" ).click(function() {
-      //alert( "Handler for .click() called." );
-      getContacts();
-    });
-
-    $( "#search" ).click(function() {
-      //alert( "Handler for .click() called." );
-      displaySearch();
-    });
-});
-
-
+/*
 function getContacts(){
 
     $("#results").empty().load("views/contacts.html", function () {
@@ -43,8 +14,8 @@ function getContacts(){
       });
     });
 }
-
-
+*/
+/*
 function displaySearch(){
 
   $("#results").empty().load("views/search.html", function () {
@@ -69,3 +40,4 @@ function executeSearch(keyword){
     $('#contacts > tbody:last-child').append(items);
   });
 }
+*/
