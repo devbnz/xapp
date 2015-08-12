@@ -1,6 +1,7 @@
 var Xapp = angular.module('Xapp', [
 'ngRoute',
-'xappControllers'
+'xappControllers',
+'xappSrv'
 ]);
 
 Xapp.config(['$routeProvider',
@@ -17,6 +18,10 @@ function($routeProvider) {
   when('/search', {
     templateUrl: 'templates/search.html',
     controller: 'SearchCtrl'
+  }).
+  when('/offsearch', {
+    templateUrl: 'templates/offsearch.html',
+    controller: 'OffSearchCtrl'
   }).
 otherwise({
   redirectTo: '/home'

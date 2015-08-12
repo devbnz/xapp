@@ -10,33 +10,7 @@
   xappControllers.controller('HomeCtrl', ['$scope', '$routeParams', '$location',
   function($scope, $routeParams, $location) {
 
-    $scope.project = {
-      title: 'SourSound',
-    };
-
-    $scope.milestones = [
-    {     id    :   1,
-      body  : "project started",
-      date  : "2015-03-07"
-    },
-    {     id    :   2,
-      body  : "GET /users endpoint + subres finished",
-      date  : "2015-03-09" },
-      {     id    :   3,
-        body  : "GET /tracks + /playlists + /groups + /comments finished",
-        date  : "2015-03-13"
-      },
-      {     id    :   4,
-        body  : "GET /users can now be used as API explorer - just fill in your SC username",
-        date  : "2015-03-14"
-      },
-      { id    :   5,
-        body  : "Project cleanup - renaming, removing old code - refactoring",
-        date  : "2015-03-15"
-      }
-      ];
-
-
+    console.log('hello world');
 
     }
     ]);
@@ -78,6 +52,35 @@
           }, function(response) {
             console.log('error while fetching search responses');
           });
+          };
+
+
+        }
+        ]);
+
+        xappControllers.controller('OffSearchCtrl', ['$scope', '$routeParams', '$location', '$http', 'xappSrv',
+        function($scope, $routeParams, $location, $http, xappSrv) {
+
+          /*
+          var keyword = 'havas media';
+          var offset = 100;
+          */
+
+          $scope.test = function() {
+
+            keyword = $scope.user.name;
+            offset  = $scope.user.offset;
+
+
+            //  var resolveId = 0;
+
+            xappSrv.getUserByKeyword(keyword, offset)
+            .then(
+              function( response ) {
+                $scope.searchResult = response;
+                console.log($scope.searchResult);
+              }
+            );
           };
 
 

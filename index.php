@@ -131,6 +131,36 @@ $app->get('/search/:keyword', function ($keyword) use ($hybridauth, $config, $ap
 */
 });
 
+$app->get('/offsearch/:keyword(/:offset)', function ($keyword, $offset) use ($hybridauth, $config, $app) {
+  if ($hybridauth->isConnectedWith('XING')) {
+    // Get the existing hybridauth session.
+    // In theory `authenticate` could start the handshake,
+    // but since we already know that hybridauth isConnectedWith XING,
+    // this will work fine.
+    $xing        = $hybridauth->authenticate('XING');
+    /*    $currentUser = $xing->getUserProfile();
+
+    $displayName = $currentUser->displayName;
+    $photoURL    = $currentUser->photoURL;
+    */
+    $results    = $xing->searchUsersByKeywordOff($keyword, $offset);
+    $results = json_encode($results);
+    echo $results;
+  } else {
+    $displayName = 'Anonymous';
+    $photoURL    = 'https://www.xing.com/img/n/nobody_m.140x185.jpg';
+  }
+
+  /*
+  $app->render('index-mat.php', array(
+  "displayName" => $displayName,
+  "photoURL"    => $photoURL,
+  "isLoggedIn"  => $hybridauth->isConnectedWith('XING'),
+  "consumerKey" => $config["providers"]["XING"]["keys"]["key"]
+));
+*/
+});
+
 $app->get('/search/user/:userid', function ($userid) use ($hybridauth, $config, $app) {
   if ($hybridauth->isConnectedWith('XING')) {
     // Get the existing hybridauth session.

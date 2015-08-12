@@ -1,0 +1,40 @@
+Keyword search:<br/><br/>
+<!-- Simple Textfield -->
+<form name="myForm" ng-submit="test()">
+  User name: <input type="text" name="userName" ng-model="user.name" required>
+  Offset:    <input type="text" name="offset" ng-model="user.offset" required>
+  <span class="error" ng-show="myForm.userName.$error.required">
+    Required!</span> <input class="btn btn-default" type="submit" value="Submit">
+  </form>
+  <!--
+<br/><br/>
+<form>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+    <input class="mdl-textfield__input" type="text" id="keywords" />
+    <label class="mdl-textfield__label" for="sample3"></label>
+  </div>
+</form>
+<!-- Disabled FAB button
+<button id="searchFab" class="mdl-button mdl-js-button mdl-button--fab" disabled>
+</button>
+-->
+<br/><br/>
+<table id="contacts" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+<thead>
+<tr>
+<!-- <th class="mdl-data-table__cell--non-numeric">XING-Profile-IDs</th> -->
+<th class="mdl-data-table__cell--non-numeric"> Firstname </th>
+<th> Lastname </th>
+<th> Company </th>
+<th> Position </th>
+</tr>
+</thead>
+<tbody>
+  <tr ng-repeat="contact in searchResult.users.items">
+    <td>{{contact.user.first_name}}</td>
+    <td>{{contact.user.last_name}}</td>
+    <td>{{contact.user.professional_experience.primary_company.name}}</td>
+    <td>{{contact.user.professional_experience.primary_company.title}}</td>
+  </tr>
+</tbody>
+</table>

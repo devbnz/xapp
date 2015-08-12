@@ -533,4 +533,22 @@ $aContacts[] = $oContact;
 //return $aContacts;
 }
 
+function searchUsersByKeywordOff($keyword, $offset) {
+  try {
+    $oResponse = $this->api->get('users/find?keywords='.$keyword.'&offset='.$offset.'&limit=100&user_fields=id,first_name,last_name,professional_experience');
+    //  $oTotal    = $oResponse->contacts->users;
+    //  $iTotal    = $oResponse->contacts->total;
+
+    /*
+    for ($i = 100; $i <= $iTotal; $i = $i + 100) {
+    $oResponse = $this->api->get('users/me/contacts?limit=100&user_fields=id,display_name,permalink,web_profiles,photo_urls,display_name,interests,active_email&offset=' . $i);
+    $oTotal    = array_merge($oTotal, $oResponse->contacts->users);
+  }*/
+}
+catch(Exception $e) {
+  throw new Exception('Could not fetch contacts. ' . $this->providerId . ' returned an error: ' . $e . '.');
+}
+return $oResponse;
+}
+
 }

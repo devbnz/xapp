@@ -26,18 +26,14 @@
     <link rel="stylesheet" href="assets/css/material.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
-  <!--
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-route.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-messages.min.js"></script>
     <script src="assets/js/xapp-ctrl.js"></script>
+    <script src="assets/js/xapp-srv.js"></script>
     <script src="assets/js/xapp-app.js"></script>
-    <script src="assets/js/xapp.js"></script>
     <script src="assets/js/ga.js"></script>
   </head>
 
@@ -63,6 +59,7 @@
               <a href="logout"><button class="mdl-button mdl-js-button mdl-button--raised">LOGOUT</button></a>
               <a ng-href="#/contacts"><button id="contacts" class="mdl-button mdl-js-button mdl-button--raised">Contacts</button></a>
               <a ng-href="#/search"><button class="mdl-button mdl-js-button mdl-button--raised">Search</button></a>
+              <a ng-href="#/offsearch"><button class="mdl-button mdl-js-button mdl-button--raised">Search /w Offset</button></a>
             <? } else { ?>
               <a href="login"><button class="mdl-button mdl-js-button mdl-button--raised">LOGIN via XING</button></a>
             <? } ?>
